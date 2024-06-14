@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- Import Lot Serial Number Form View -->
+        <record id="import_lot_serial_number" model="ir.ui.view">
+            <field name="name">import.lot.serial.number</field>
+            <field name="model">import.lot.serial.number</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="upload_file" filename="file_name" required="1"/>
+                                <field name="file_name" invisible="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_import_xlsx_file" type="object" string="Import Serial/Lot Numbers" class="oe_highlight"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel" data-hotkey="z"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
